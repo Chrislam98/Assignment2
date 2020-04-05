@@ -32,10 +32,10 @@ import java.util.HashMap;
 
 public class AddNewProduct extends AppCompatActivity {
 
-    private String Description, Price, Pname, saveCurrentDate, saveCurrentTime;
+    private String Description, Price, Category, Pname, saveCurrentDate, saveCurrentTime;
     private Button AddNewProductButton;
     private ImageView InputProductImage;
-    private EditText InputProductName, InputProductDescription, InputProductPrice;
+    private EditText InputProductName,InputProductCategory , InputProductDescription, InputProductPrice;
     private static final int GalleryPick = 1;
     private Uri ImageUri;
     private String productRandomKey, downloadImageUrL;
@@ -53,6 +53,7 @@ public class AddNewProduct extends AppCompatActivity {
 
         AddNewProductButton = (Button) findViewById(R.id.add_new_product);
         InputProductImage = (ImageView) findViewById(R.id.select_product_image);
+        InputProductCategory = (EditText) findViewById(R.id.product_category);
         InputProductName = (EditText) findViewById(R.id.product_name);
         InputProductDescription = (EditText) findViewById(R.id.product_description);
         InputProductPrice = (EditText) findViewById(R.id.product_price);
@@ -103,6 +104,9 @@ public class AddNewProduct extends AppCompatActivity {
         if(ImageUri == null){
             Toast.makeText(this,"Product image is mandatory", Toast.LENGTH_SHORT).show();
         }
+        else if(TextUtils.isEmpty(Price)){
+            Toast.makeText(this,"Please write product Category" , Toast.LENGTH_SHORT).show();
+        }
         else if(TextUtils.isEmpty(Description)){
             Toast.makeText(this,"Please write product Description" , Toast.LENGTH_SHORT).show();
         }
@@ -132,7 +136,7 @@ public class AddNewProduct extends AppCompatActivity {
         SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
         saveCurrentTime = currentTime.format(calendar.getTime());
 
-        productRandomKey = saveCurrentDate + saveCurrentTime;
+        productRandomKey = saveCurrentDate  + "," + saveCurrentTime;
 
         final StorageReference filePath = ProductImageRef.child(ImageUri.getLastPathSegment() + productRandomKey + ".jpg");
         final UploadTask uploadTask = filePath.putFile(ImageUri);
