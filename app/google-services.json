@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "54852909639",
+    "firebase_url": "https://ryon-c9855.firebaseio.com",
+    "project_id": "ryon-c9855",
+    "storage_bucket": "ryon-c9855.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54852909639:android:8de619f6cb2853fc9a0f62",
+        "android_client_info": {
+          "package_name": "com.android.example.assignment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "54852909639-dfulvppndniab2jd3e2o54e8f9s7ii8c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.android.example.assignment",
+            "certificate_hash": "2ebbe6b4ad7edf19262631470cc6ecf379979dcb"
+          }
+        },
+        {
+          "client_id": "54852909639-a7jsedd6sln0amb5qm38jsbabi2gepcn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJl2X-c9ycoCnito_FHjvEbM704sqmE3w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "54852909639-a7jsedd6sln0amb5qm38jsbabi2gepcn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
